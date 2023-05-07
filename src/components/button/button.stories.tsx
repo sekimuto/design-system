@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { FC } from 'react';
 
-import { StoryHeader } from '../../stories/header';
-import { StoryHeaderProps } from '../../stories/types';
+import { StoryDisplay } from '../../stories/display';
+import { StoryDisplayProps } from '../../stories/types';
 
 import { Button } from './button';
 import { ButtonProps } from './types';
@@ -11,16 +11,15 @@ const ButtonDisplay: FC<ButtonProps> = (props) => {
   const title = 'Button';
   const description = "ボタンコンポーネント";
 
-  const headerCss: StoryHeaderProps = {
+  const displayProps: StoryDisplayProps = {
     title,
     description
   };
 
   return (
-    <>
-      <StoryHeader {...headerCss}/>
+    <StoryDisplay {...displayProps}>
       <Button {...props}/>
-    </>
+    </StoryDisplay>
   )
 };
 

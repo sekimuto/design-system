@@ -7,7 +7,7 @@ export const Checkbox = memo(
   forwardRef<HTMLInputElement, CheckboxProps>((props, ref) => {
     return (
       <>
-        <input ref={ref}></input>
+        <input ref={ref} />
       </>
     )
   })
